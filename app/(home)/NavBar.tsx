@@ -1,34 +1,46 @@
 "use client";
 
 import React from "react";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import Container from "@mui/material/Container";
+import {
+  AppBar,
+  Box,
+  Button,
+  Container,
+  Link,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import Logo from "./Logo";
 import { useTheme } from "@mui/material";
+import ComposedNextLink from "@/components/ComposedNextLink";
+import Paw from "./Paw";
 
 export default function NavBar() {
   const theme = useTheme();
   return (
-    <AppBar position="fixed" sx={{ background: theme.palette.primary.light }}>
-      <Container maxWidth="lg">
+    <AppBar position="fixed" sx={{ bgcolor: theme.palette.primary.light }}>
+      <Container maxWidth="lg" sx={{ py: theme.spacing(5) }}>
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
+          <Link
+            component={ComposedNextLink}
+            href="/"
+            sx={{ mr: theme.spacing(20) }}
           >
             <Logo />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
-          </Typography>
-          <Button color="inherit">Login</Button>
+          </Link>
+          <Box sx={{ display: "flex", gap: theme.spacing(10) }}>
+            <Link href="/#activity">
+              <Box
+                sx={{
+                  display: "flex",
+                  gap: theme.spacing(2),
+                }}
+              >
+                <Paw />
+                <Typography variant="button">最新活動</Typography>
+              </Box>
+            </Link>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
