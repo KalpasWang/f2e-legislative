@@ -2,47 +2,49 @@
 
 import React from "react";
 import {
-  AppBar,
-  Box,
-  Button,
-  Container,
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
   Link,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+  Button,
+} from "@nextui-org/react";
 import Logo from "./Logo";
-import { useTheme } from "@mui/material";
-import ComposedNextLink from "@/components/ComposedNextLink";
 import Paw from "./Paw";
 
 export default function NavBar() {
-  const theme = useTheme();
   return (
-    <AppBar position="fixed" sx={{ bgcolor: theme.palette.primary.light }}>
-      <Container maxWidth="lg" sx={{ py: theme.spacing(5) }}>
-        <Toolbar>
-          <Link
-            component={ComposedNextLink}
-            href="/"
-            sx={{ mr: theme.spacing(20) }}
-          >
-            <Logo />
+    <Navbar>
+      <NavbarBrand>
+        <Logo />
+      </NavbarBrand>
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Features
           </Link>
-          <Box sx={{ display: "flex", gap: theme.spacing(10) }}>
-            <Link href="/#activity">
-              <Box
-                sx={{
-                  display: "flex",
-                  gap: theme.spacing(2),
-                }}
-              >
-                <Paw />
-                <Typography variant="button">最新活動</Typography>
-              </Box>
-            </Link>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+        </NavbarItem>
+        <NavbarItem isActive>
+          <Link href="#" aria-current="page">
+            Customers
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Integrations
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent justify="end">
+        <NavbarItem className="hidden lg:flex">
+          <Link href="#">Login</Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Button as={Link} color="primary" href="#" variant="flat">
+            Sign Up
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
+    </Navbar>
   );
 }

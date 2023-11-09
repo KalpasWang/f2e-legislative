@@ -1,17 +1,23 @@
 "use client";
-import { CssBaseline, ThemeProvider } from "@mui/material";
 import React from "react";
-import theme from "./theme";
+import { useRouter } from "next/navigation";
+import { NextUIProvider } from "@nextui-org/react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import NavBar from "./NavBar";
 
 type Props = {
   children: React.ReactNode;
 };
 
 export default function HomeLayout({ children }: Props) {
+  const router = useRouter();
+
   return (
-    // <ThemeProvider theme={theme}>
-    // <CssBaseline />
-    <main>{children}</main>
-    // </ThemeProvider>
+    <NextUIProvider navigate={router.push}>
+      <NextThemesProvider attribute="class" defaultTheme="light">
+        <NavBar />
+        {children}
+      </NextThemesProvider>
+    </NextUIProvider>
   );
 }
