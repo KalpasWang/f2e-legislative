@@ -9,9 +9,9 @@ type Props = {
 
 export default function HomeLayout({ children }: Props) {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      {children}
-    </ThemeProvider>
+    // <ThemeProvider theme={theme}>
+    // <CssBaseline />
+    <main>{children}</main>
+    // </ThemeProvider>
   );
 }
