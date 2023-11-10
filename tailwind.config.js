@@ -17,6 +17,12 @@ module.exports = {
         lg: "2rem",
       },
     },
+    boxShadow: {
+      title: "10px 10px 0px 0px #BFBFBF",
+    },
+    borderRadius: {
+      title: "20px",
+    },
   },
   darkMode: "class",
   plugins: [
