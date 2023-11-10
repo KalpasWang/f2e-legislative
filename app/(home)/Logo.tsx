@@ -1,13 +1,12 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { useMedia } from "react-use";
 
 type Props = {};
 
 export default function Logo({}: Props) {
-  const isMatch = useMedia("(min-width: 600px)");
+  const isMatch = useMedia("(min-width: 768px)");
   const width = isMatch ? 199 : 118;
   const height = isMatch ? 69 : 41;
   return (

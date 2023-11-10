@@ -24,14 +24,15 @@ module.exports = {
       themes: {
         light: {
           colors: {
-            background: "#ffffff",
-            foreground: "#333333",
+            background: "#FFFFFF",
+            foreground: "#0B0A09",
             primary: {
               DEFAULT: "#F9A828",
               foreground: "#0B0A09",
             },
             secondary: "#724600",
             shadow: "#BFBFBF",
+            support: "#FFFFFF",
           },
           layout: {
             disabledOpacity: "0.3",
