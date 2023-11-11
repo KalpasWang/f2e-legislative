@@ -7,9 +7,8 @@ import {
   NavbarContent,
   NavbarItem,
   Link,
-  Button,
 } from "@nextui-org/react";
-import Logo from "./Logo";
+import Logo from "@/components/Logo";
 import Paw from "@/components/icons/Paw";
 import { notoSansTC } from "./layout";
 
