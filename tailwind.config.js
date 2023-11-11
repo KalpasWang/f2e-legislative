@@ -18,11 +18,21 @@ module.exports = {
       },
     },
     extend: {
+      gridTemplateRows: {
+        "activity-layout": "49vh, auto, 49vh",
+      },
       boxShadow: {
         title: "10px 10px 0px 0px #BFBFBF",
+        activity: "8px 8px 0px 0px #000",
       },
       borderRadius: {
         title: "20px",
+      },
+      left: {
+        "8/9": "88.9%",
+      },
+      fontSize: {
+        "6xl": "4rem",
       },
     },
   },
@@ -37,6 +47,7 @@ module.exports = {
             primary: {
               DEFAULT: "#F9A828",
               foreground: "#0B0A09",
+              dark: "#C78620",
             },
             secondary: "#724600",
             shadow: "#BFBFBF",

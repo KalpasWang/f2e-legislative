@@ -10,7 +10,7 @@ type Props = {};
 
 const activityItems: ActivityItem[] = [
   {
-    id: 1,
+    id: 0,
     name: "收容所模特兒大比拼！",
     date: "12/20",
     detail:
@@ -18,7 +18,7 @@ const activityItems: ActivityItem[] = [
     image: "/activity1.webp",
   },
   {
-    id: 2,
+    id: 1,
     name: "掃街模式開啟！帶著你的貓耳，來和我一起走！",
     date: "12/24",
     detail:
@@ -26,7 +26,7 @@ const activityItems: ActivityItem[] = [
     image: "/activity2.webp",
   },
   {
-    id: 3,
+    id: 2,
     name: "參與台北寵物論壇，爭取貓咪友善環境",
     date: "12/26",
     detail:

@@ -7,7 +7,7 @@ export default function Claim({}: Props) {
   return (
     <section className="py-unit-32">
       <div className="container">
-        <h2 className=" mb-unit-12">
+        <h2 className="mb-unit-12">
           <span className="inline-block font-bold tracking-widest text-medium text-background bg-foreground px-unit-8 py-unit-5 rounded-tl-title rounded-br-title shadow-title">
             我的主張
           </span>
