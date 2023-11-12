@@ -17,9 +17,17 @@ module.exports = {
         lg: "2rem",
       },
     },
+    colors: {
+      primaryDark: "#C78620",
+      shadow: "#BFBFBF",
+      support: "#FFFFFF",
+    },
     extend: {
       gridTemplateRows: {
-        "activity-layout": "49vh, auto, 49vh",
+        "activity-layout": "minmax(300px, 1fr), auto, minmax(300px, 1fr)",
+      },
+      gridTemplateColumns: {
+        "activity-detail": "minmax(64px, 1fr), auto, minmax(64px, 1fr)",
       },
       boxShadow: {
         title: "10px 10px 0px 0px #BFBFBF",
@@ -27,9 +35,6 @@ module.exports = {
       },
       borderRadius: {
         title: "20px",
-      },
-      left: {
-        "8/9": "88.9%",
       },
       fontSize: {
         "6xl": "4rem",
@@ -47,11 +52,8 @@ module.exports = {
             primary: {
               DEFAULT: "#F9A828",
               foreground: "#0B0A09",
-              dark: "#C78620",
             },
             secondary: "#724600",
-            shadow: "#BFBFBF",
-            support: "#FFFFFF",
           },
           layout: {
             disabledOpacity: "0.3",
@@ -61,7 +63,6 @@ module.exports = {
               small: "0.875rem", // text-small 14px
               medium: "1.5rem", // text-medium 24px
               large: "2.5rem", // text-large
-              DEFAULT: "1rem", // text-base
             },
             lineHeight: {
               tiny: "1rem", // text-tiny

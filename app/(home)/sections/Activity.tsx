@@ -38,7 +38,7 @@ const activityItems: ActivityItem[] = [
 export default function Activity({}: Props) {
   const isMatch = useMedia("(min-width: 640px)", true);
   return (
-    <section>
+    <section className="overflow-hidden">
       {isMatch ? (
         <ActivityDesktop items={activityItems} />
       ) : (
