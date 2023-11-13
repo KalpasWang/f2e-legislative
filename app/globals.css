@@ -27,3 +27,9 @@
 .scale-small {
   transform: scale(0.5) translateX(-50%);
 }
+
+.icon-size {
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+}

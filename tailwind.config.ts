@@ -27,7 +27,7 @@ module.exports = {
         "activity-layout": "minmax(300px, 1fr), auto, minmax(300px, 1fr)",
       },
       gridTemplateColumns: {
-        "activity-detail": "minmax(64px, 1fr), auto, minmax(64px, 1fr)",
+        "activity-detail": "minmax(48px, 1fr), auto, minmax(48px, 1fr)",
       },
       boxShadow: {
         title: "10px 10px 0px 0px #BFBFBF",
@@ -47,6 +47,7 @@ module.exports = {
       themes: {
         light: {
           colors: {
+            default: "#0B0A09",
             background: "#FFFFFF",
             foreground: "#0B0A09",
             primary: {

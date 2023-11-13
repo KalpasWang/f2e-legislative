@@ -30,13 +30,15 @@ export default function ActivityDetails({
         {back && (
           <Button
             color="primary"
-            variant="bordered"
-            className="border-3"
+            variant="light"
+            isIconOnly
+            aria-label="Left"
+            className="icon-size"
             radius="full"
             size="sm"
             onClick={back}
           >
-            <ChevronLeft fill="#F9A828" />
+            <ChevronLeft />
           </Button>
         )}
       </div>
@@ -54,13 +56,15 @@ export default function ActivityDetails({
         {next && (
           <Button
             color="primary"
-            variant="bordered"
-            className="border-3"
+            variant="light"
+            isIconOnly
+            aria-label="Right"
+            className="icon-size"
             size="sm"
             radius="full"
             onClick={next}
           >
-            <ChevronRight fill="#F9A828" />
+            <ChevronRight />
           </Button>
         )}
       </div>
