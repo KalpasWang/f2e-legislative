@@ -34,7 +34,7 @@ export default function Claim({}: Props) {
               />
             </div>
           </div>
-          <div className="flex flex-col justify-center ">
+          <div className="flex flex-col justify-center items-center">
             <Image
               src="/claim.jpg"
               className="object-cover"

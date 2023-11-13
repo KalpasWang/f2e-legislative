@@ -44,7 +44,7 @@ export default function ActivityDesktop({ items }: Props) {
             src={item.image}
             width={2000}
             height={2000}
-            className="object-cover"
+            className="object-cover mx-auto"
             alt="活動照片"
           />
         </motion.div>
