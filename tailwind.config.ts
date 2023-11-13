@@ -32,6 +32,7 @@ module.exports = {
       boxShadow: {
         title: "10px 10px 0px 0px #BFBFBF",
         activity: "8px 8px 0px 0px #000",
+        card: "0px 8px 19px 0px rgba(249, 168, 40, 0.10), 0px 34px 34px 0px rgba(249, 168, 40, 0.09), 0px 76px 46px 0px rgba(249, 168, 40, 0.05), 0px 135px 54px 0px rgba(249, 168, 40, 0.01), 0px 211px 59px 0px rgba(249, 168, 40, 0.00);",
       },
       borderRadius: {
         title: "20px",
