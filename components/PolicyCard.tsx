@@ -12,6 +12,7 @@ type Props = {
   icon: React.ReactNode;
   title: string;
   subtitle: string;
+  onPress: () => void;
 };
 
 export default function PolicyCard({
@@ -19,6 +20,7 @@ export default function PolicyCard({
   icon,
   title,
   subtitle,
+  onPress,
 }: Props) {
   return (
     <Card className="px-unit-4 py-unit-6 border-primary border-4 shadow-card">
@@ -34,7 +36,7 @@ export default function PolicyCard({
         </p>
       </CardBody>
       <CardFooter className="flex justify-center">
-        <Button color="primary" size="md" radius="md">
+        <Button onPress={onPress} color="primary" size="md" radius="md">
           了解更多
         </Button>
       </CardFooter>
