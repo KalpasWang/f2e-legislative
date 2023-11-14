@@ -40,6 +40,9 @@ module.exports = {
       fontSize: {
         "6xl": "4rem",
       },
+      lineHeight: {
+        max: "3",
+      },
     },
   },
   darkMode: "class",
@@ -56,6 +59,7 @@ module.exports = {
               foreground: "#0B0A09",
             },
             secondary: "#724600",
+            focus: "#BFBFBF",
           },
           layout: {
             disabledOpacity: "0.3",
