@@ -4,7 +4,7 @@ type Props = {
   className?: string;
 };
 
-export default function LeftTriangle({ className = "" }: Props) {
+export default function RightTriangle({ className = "" }: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,7 +14,7 @@ export default function LeftTriangle({ className = "" }: Props) {
       className={className}
     >
       <g>
-        <path fill="#F9A828" d="M0,0 L112,112 H0 V0Z" />
+        <path fill="#F9A828" d="M0,0 H112 V112 L0,0Z" />
       </g>
     </svg>
   );
