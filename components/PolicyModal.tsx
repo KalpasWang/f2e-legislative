@@ -4,12 +4,9 @@ import {
   ModalContent,
   ModalHeader,
   ModalBody,
-  ModalFooter,
   Button,
-  useDisclosure,
-  RadioGroup,
-  Radio,
 } from "@nextui-org/react";
+import Close from "./icons/Close";
 
 type Props = {
   title: string;
@@ -27,17 +24,28 @@ export default function PolicyModal({
   onOpenChange,
 }: Props) {
   return (
-    <Modal isOpen={isOpen} onOpenChange={onOpenChange} scrollBehavior="outside">
+    <Modal
+      isOpen={isOpen}
+      onOpenChange={onOpenChange}
+      scrollBehavior="outside"
+      size="5xl"
+      classNames={{
+        closeButton: "hidden",
+        body: "pl-12",
+      }}
+    >
       <ModalContent>
         {(onClose) => (
-          <Modal>
-            <ModalHeader className="mb-unit-4">
+          <>
+            <ModalHeader className="mb-unit-4 block">
               <div className="mb-unit-10">
                 <Button
                   onPress={onClose}
-                  variant="solid"
+                  variant="light"
                   color="primary"
                   radius="full"
+                  className="text-foreground"
+                  startContent={<Close />}
                 >
                   關閉
                 </Button>
@@ -46,20 +54,20 @@ export default function PolicyModal({
                 {title}
               </h3>
             </ModalHeader>
-            <ModalBody className="pb-unit-15">
+            <ModalBody className="pb-unit-15 gap-unit-8">
               {list.map((listItem, i) => (
-                <p className="leading-normal mb-unit-8" key={i}>
-                  <span className="pr-2">{i}.</span>
+                <p className="leading-normal" key={i}>
+                  <span className="pr-2">{i + 1}.</span>
                   {listItem}
                 </p>
               ))}
               {details.map((detail, i) => (
-                <p className="leading-normal mb-unit-8" key={i}>
+                <p className="leading-normal" key={i}>
                   {detail}
                 </p>
               ))}
             </ModalBody>
-          </Modal>
+          </>
         )}
       </ModalContent>
     </Modal>
