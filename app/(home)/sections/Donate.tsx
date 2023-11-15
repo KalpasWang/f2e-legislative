@@ -1,9 +1,13 @@
+"use client";
+
+import React, { useCallback } from "react";
+import { Button, Input, useDisclosure } from "@nextui-org/react";
 import DonateProject from "@/components/DonateProject";
 import SectionTitle from "@/components/SectionTitle";
 import LeftTriangle from "@/components/icons/LeftTriangle";
 import RightTriangle from "@/components/icons/RightTriangle";
-import { Button, Input } from "@nextui-org/react";
-import React from "react";
+import { notoSansTC } from "../layout";
+import DonateConfirmModal from "@/components/DonateConfirmModal";
 
 type Props = {};
 
@@ -26,6 +30,12 @@ const donateItems = [
 ];
 
 export default function Donate({}: Props) {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  }, []);
+
   return (
     <section className="relative bg-primary overflow-visible pb-unit-32">
       <SectionTitle className="absolute top-0 left-28 -translate-y-full">
@@ -34,16 +44,20 @@ export default function Donate({}: Props) {
       <LeftTriangle className="absolute top-0 left-0 -translate-y-full" />
       <RightTriangle className="absolute bottom-0 right-0 translate-y-full" />
       <div className="container">
-        <div className="grid grid-cols-2 py-unit-60">
-          <div>
-            <h3>
-              <span>00</span>%
-            </h3>
-            <p>已有 2,395,732 人贊助</p>
+        <div
+          className={
+            "grid grid-cols-2 items-center py-unit-60 " + notoSansTC.className
+          }
+        >
+          <div className="text-center leading-normal">
+            <p className="text-5xl font-bold">
+              <span className="text-8xl">00</span>%
+            </p>
+            <p className="text-2xl">已有 2,395,732 人贊助</p>
           </div>
-          <div>
-            <p>目前小額贊助總金額</p>
-            <h3>$987,655,873</h3>
+          <div className="text-center leading-normal">
+            <p className="text-2xl">目前小額贊助總金額</p>
+            <p className="text-5xl font-bold">$987,655,873</p>
           </div>
         </div>
         <div className="flex justify-between items-stretch gap-unit-5">
@@ -53,10 +67,17 @@ export default function Donate({}: Props) {
               title={item.title}
               money={item.money}
               imgUrl={item.imgUrl}
+              onCardPress={() => {
+                console.log("click!");
+                onOpen();
+              }}
             />
           ))}
         </div>
-        <form className="pt-unit-14 w-2/3 mx-auto">
+        <form
+          className="pt-unit-14 w-2/3 mx-auto"
+          onSubmit={(e) => onSubmit(e)}
+        >
           <Input
             type="number"
             radius="lg"
@@ -76,6 +97,7 @@ export default function Donate({}: Props) {
               color="default"
               fullWidth
               className="text-background text-xl"
+              onPress={onOpen}
             >
               $ One-Time
             </Button>
@@ -84,12 +106,14 @@ export default function Donate({}: Props) {
               color="default"
               fullWidth
               className="text-background text-xl"
+              onPress={onOpen}
             >
               Monthly
             </Button>
           </div>
         </form>
       </div>
+      <DonateConfirmModal isOpen={isOpen} onOpenChange={onOpenChange} />
     </section>
   );
 }
