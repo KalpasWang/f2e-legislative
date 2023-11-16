@@ -9,7 +9,7 @@ type Props = {
 };
 
 export default function Logo({ fill = "#0B0A09", className = "" }: Props) {
-  const isMatch = useMedia("(min-width: 768px)", true);
+  const isMatch = useMedia("(min-width: 1024px)", false);
   const width = isMatch ? 199 : 118;
   const height = isMatch ? 69 : 41;
   return (

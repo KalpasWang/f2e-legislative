@@ -1,15 +1,20 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
   Link,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
 } from "@nextui-org/react";
 import Logo from "@/components/Logo";
 import Paw from "@/components/icons/Paw";
+import Menu from "@/components/icons/Menu";
+import CloseMenu from "@/components/icons/CloseMenu";
 import { notoSansTC } from "./layout";
 
 const navItems = [
@@ -32,18 +37,32 @@ const navItems = [
 ];
 
 export default function NavBar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <Navbar className="p-0 shadow-md sm:py-unit-4">
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      isMenuOpen={isMenuOpen}
+      classNames={{
+        base: "p-0 shadow-md lg:py-unit-4",
+        menu: "h-max",
+      }}
+    >
+      <NavbarMenuToggle
+        icon={isMenuOpen ? <CloseMenu /> : <Menu />}
+        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        className="lg:hidden"
+      />
       <NavbarBrand>
         <Logo />
       </NavbarBrand>
-      <NavbarContent className="hidden gap-4 md:flex" justify="center">
+      <NavbarContent className="hidden gap-4 lg:flex" justify="center">
         {navItems.map((item) => (
           <NavbarItem key={item.href} className={notoSansTC.className}>
             <Link
               href={item.href}
               color="foreground"
-              className="text-base font-bold md:text-medium"
+              className="decoration-primary font-bold text-medium"
               underline="hover"
             >
               <Paw className="inline-block mr-2" /> {item.name}
@@ -51,6 +70,21 @@ export default function NavBar() {
           </NavbarItem>
         ))}
       </NavbarContent>
+      <NavbarMenu>
+        {navItems.map((item, i) => (
+          <NavbarMenuItem key={i}>
+            <Link
+              color="foreground"
+              href={item.href}
+              className="w-full decoration-primary text-base font-bold"
+              underline="hover"
+              size="lg"
+            >
+              <Paw className="inline-block mr-2" /> {item.name}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   );
 }
