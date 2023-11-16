@@ -16,6 +16,10 @@
   }
 }
 
+.text-last-justify {
+  text-align-last: justify;
+}
+
 .scale-big {
   transform: scale(1.25) translateX(-50%);
 }
