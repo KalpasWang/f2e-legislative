@@ -24,6 +24,7 @@ export default function DonateProject({
 }: Props) {
   return (
     <Button
+      type="submit"
       variant="light"
       className="p-0 w-fit h-fit"
       onPress={() => onCardPress()}
@@ -31,7 +32,7 @@ export default function DonateProject({
       <Card
         radius="lg"
         classNames={{
-          base: "flex-row lg:flex-col p-0 shadow-md cursor-pointer",
+          base: "flex-col p-0 shadow-md cursor-pointer",
           header: "p-0 basis-1/3 lg:basis-auto h-full",
           body: "px-4 py-2 flex-grow",
         }}

@@ -8,8 +8,6 @@ export default function LeftTriangle({ className = "" }: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="112px"
-      height="112px"
       viewBox="0 0 112 112"
       className={className}
     >
