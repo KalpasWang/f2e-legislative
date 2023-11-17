@@ -15,7 +15,6 @@ import Logo from "@/components/Logo";
 import Paw from "@/components/icons/Paw";
 import Menu from "@/components/icons/Menu";
 import CloseMenu from "@/components/icons/CloseMenu";
-import { notoSansTC } from "./layout";
 
 const navItems = [
   {
@@ -58,7 +57,7 @@ export default function NavBar() {
       </NavbarBrand>
       <NavbarContent className="hidden gap-4 lg:flex" justify="center">
         {navItems.map((item) => (
-          <NavbarItem key={item.href} className={notoSansTC.className}>
+          <NavbarItem key={item.href} className="font-noToSansTC">
             <Link
               href={item.href}
               color="foreground"

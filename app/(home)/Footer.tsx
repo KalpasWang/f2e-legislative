@@ -1,5 +1,4 @@
 import React from "react";
-import { notoSansTC } from "./layout";
 import Phone from "@/components/icons/Phone";
 import Location from "@/components/icons/Location";
 import { Link } from "@nextui-org/react";
@@ -11,7 +10,7 @@ type Props = {};
 export default function Footer({}: Props) {
   return (
     <footer className="pt-10 pb-16 bg-[#FCF2D0]">
-      <div className={"container " + notoSansTC.className}>
+      <div className="container font-noToSansTC">
         <div className="flex flex-col lg:flex-row flex-nowrap justify-between gap-4 text-secondary max-w-6xl mx-auto">
           <div className="text-center lg:text-left">
             <div className="inline-flex flex-col items-start">

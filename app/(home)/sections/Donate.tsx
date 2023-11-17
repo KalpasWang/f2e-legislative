@@ -7,7 +7,6 @@ import SectionTitle from "@/components/SectionTitle";
 import LeftTriangle from "@/components/icons/LeftTriangle";
 import RightTriangle from "@/components/icons/RightTriangle";
 import DonateConfirmModal from "@/components/DonateConfirmModal";
-import { notoSansTC } from "../layout";
 import Counter from "@/components/Counter";
 
 type Props = {};
@@ -45,12 +44,7 @@ export default function Donate({}: Props) {
       <LeftTriangle className="absolute top-0 left-0 -translate-y-full w-6 h-6 lg:w-28 lg:h-28" />
       <RightTriangle className="absolute bottom-0 right-0 translate-y-full w-6 h-6 lg:w-28 lg:h-28" />
       <div className="container">
-        <div
-          className={cn(
-            "grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 items-center py-unit-8 lg:py-unit-60",
-            notoSansTC.className
-          )}
-        >
+        <div className="font-noToSansTC grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 items-center py-unit-8 lg:py-unit-60">
           <div className="text-center leading-normal">
             <p className="text-5xl font-bold">
               <span className="text-8xl">

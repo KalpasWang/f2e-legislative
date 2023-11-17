@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { cn } from "@nextui-org/react";
-import { notoSansTC } from "../layout";
 
 type Props = {};
 
@@ -38,7 +36,7 @@ export default function Hero({}: Props) {
             alt="喵立翰"
           />
         </div>
-        <div className={cn("relative", notoSansTC)}>
+        <div className="relative font-noToSansTC">
           <h1 className="text-tiny text-right lg:text-left lg:text-2xl font-bold leading-normal tracking-[1px]">
             立法委員
             <span className="block leading-normal text-xl lg:text-large tracking-[4.8px]">

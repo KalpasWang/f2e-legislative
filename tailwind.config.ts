@@ -23,6 +23,9 @@ module.exports = {
       support: "#FFFFFF",
     },
     extend: {
+      fontFamily: {
+        noToSansTC: ["'Noto Sans TC'", "sans-serif"],
+      },
       gridTemplateRows: {
         "activity-layout": "minmax(300px, 1fr), auto, minmax(300px, 1fr)",
       },
