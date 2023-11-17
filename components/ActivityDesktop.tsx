@@ -2,9 +2,8 @@
 
 import React, { useMemo } from "react";
 import Image from "next/image";
-import { ActivityItem } from "@/types";
-import { Button } from "@nextui-org/react";
 import { AnimatePresence, motion } from "framer-motion";
+import { ActivityItem } from "@/types";
 import useStepper from "@/hooks/useStepper";
 import SectionTitle from "./SectionTitle";
 import DateMarker from "./DateMarker";
@@ -32,7 +31,7 @@ export default function ActivityDesktop({ items }: Props) {
 
   const backgrounds = useMemo(
     () =>
-      items.map((item) => (
+      items.map((item, i) => (
         <motion.div
           key={item.id}
           initial={{ opacity: 0 }}
@@ -42,6 +41,7 @@ export default function ActivityDesktop({ items }: Props) {
         >
           <Image
             src={item.image}
+            priority={i > 0 ? false : true}
             width={2000}
             height={2000}
             className="object-cover mx-auto"

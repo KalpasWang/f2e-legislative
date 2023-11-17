@@ -24,7 +24,7 @@ export default function DonateProject({
         <CardHeader className="p-0">
           <Image src={imgUrl} alt={title} width={1232} height={928} />
         </CardHeader>
-        <CardBody className="px-4 py-2flex-grow">
+        <CardBody className="px-4 py-2 flex-grow">
           <h3 className="text-large leading-normal">{title}</h3>
           <p className="text-small leading-normal">撥款新台幣</p>
           <h4 className="text-secondary text-large leading-max font-bold tracking-[4px]">
