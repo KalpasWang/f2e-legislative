@@ -15,7 +15,7 @@ export default function Contact({}: Props) {
   }, []);
 
   return (
-    <section className="py-unit-32">
+    <section id="contact" className="py-unit-32">
       <div className="container">
         <SectionTitle>民眾服務信箱</SectionTitle>
         <form className="pt-unit-12" onSubmit={onSubmit}>

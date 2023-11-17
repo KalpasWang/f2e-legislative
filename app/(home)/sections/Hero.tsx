@@ -6,7 +6,10 @@ type Props = {};
 
 export default function Hero({}: Props) {
   return (
-    <section className="relative h-[calc(100vh-64px)] min-h-[500px] lg:min-h-[700px] overflow-hidden">
+    <section
+      id="hero"
+      className="relative h-[calc(100vh-64px)] min-h-[500px] lg:min-h-[700px] overflow-hidden"
+    >
       <div className="absolute bottom-0 left-0 right-0">
         <Image
           src="/gradient1.svg"
@@ -47,7 +50,7 @@ export default function Hero({}: Props) {
             </span>
           </h1>
           <div className="text-justify text-last-justify leading-normal pt-unit-10 lg:pt-0">
-            <h2 className="text-large lg:text-8xl text-support lg:text-foreground">
+            <h2 className="text-large font-bold lg:text-8xl text-support lg:text-foreground">
               從<span className="lg:text-primary">喵</span>的眼中
               <span className="block leading-normal">看見台灣</span>
             </h2>

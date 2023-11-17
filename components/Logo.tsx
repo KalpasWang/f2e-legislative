@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useCallback } from "react";
+import { Link } from "@nextui-org/react";
 import { useMedia } from "react-use";
 
 type Props = {
@@ -12,8 +13,16 @@ export default function Logo({ fill = "#0B0A09", className = "" }: Props) {
   const isMatch = useMedia("(min-width: 1024px)", false);
   const width = isMatch ? 199 : 118;
   const height = isMatch ? 69 : 41;
+
+  const clickHandler = useCallback(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
-    <div>
+    <Link href="#hero" onClick={clickHandler}>
       <svg
         width={width}
         height={height}
@@ -123,6 +132,6 @@ export default function Logo({ fill = "#0B0A09", className = "" }: Props) {
           fill={fill}
         />
       </svg>
-    </div>
+    </Link>
   );
 }

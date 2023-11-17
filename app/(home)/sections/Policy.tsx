@@ -78,7 +78,10 @@ export default function Policy({}: Props) {
   );
 
   return (
-    <section className="pt-unit-32 pb-unit-52 bg-background text-foreground">
+    <section
+      id="policy"
+      className="pt-unit-32 pb-unit-52 bg-background text-foreground"
+    >
       <div className="container">
         <SectionTitle className="mb-unit-12">政策議題</SectionTitle>
         <div className="grid grid-rows-3 gap-6 lg:grid-cols-3 lg:grid-rows-1 lg:max-w-7xl xl:gap-unit-12 mx-auto">

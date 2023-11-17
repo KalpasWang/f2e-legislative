@@ -37,7 +37,10 @@ export default function Donate({}: Props) {
   }, []);
 
   return (
-    <section className="relative bg-primary overflow-visible pb-unit-32">
+    <section
+      id="donate"
+      className="relative bg-primary overflow-visible pb-unit-32"
+    >
       <SectionTitle className="absolute top-0 left-6 lg:left-28 -translate-y-full">
         小額捐款
       </SectionTitle>
@@ -71,7 +74,7 @@ export default function Donate({}: Props) {
                 title={item.title}
                 money={item.money}
                 imgUrl={item.imgUrl}
-                onCardPress={() => open()}
+                onCardPress={() => onOpen()}
               />
             ))}
           </div>

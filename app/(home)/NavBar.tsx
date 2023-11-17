@@ -30,7 +30,7 @@ const navItems = [
     name: "小額捐款",
   },
   {
-    href: "#email",
+    href: "#contact",
     name: "民眾服務信箱",
   },
 ];
