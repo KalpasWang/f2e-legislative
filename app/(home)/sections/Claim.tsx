@@ -9,7 +9,7 @@ export default function Claim({}: Props) {
     <section className="py-unit-32">
       <div className="container">
         <SectionTitle className="mb-unit-12">我的主張</SectionTitle>
-        <div className="grid grid-rows-2 lg:grid-cols-2 gap-5">
+        <div className="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-5">
           <div className="text-base text-foreground">
             <div className="flex flex-col items-end justify-between">
               <div className="relative leading-[30px] inline-block shrink-0">

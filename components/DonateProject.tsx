@@ -1,6 +1,13 @@
 import React from "react";
-import { Card, CardBody, CardHeader, Progress } from "@nextui-org/react";
-import Image from "next/image";
+import {
+  Button,
+  Card,
+  CardBody,
+  CardHeader,
+  Progress,
+  Image,
+} from "@nextui-org/react";
+import NextImage from "next/image";
 
 type Props = {
   imgUrl: string;
@@ -16,15 +23,31 @@ export default function DonateProject({
   onCardPress,
 }: Props) {
   return (
-    <button onClick={() => onCardPress()}>
+    <Button
+      variant="light"
+      className="p-0 w-fit h-fit"
+      onPress={() => onCardPress()}
+    >
       <Card
         radius="lg"
-        className="p-0 shadow-md cursor-pointer active:opacity-80"
+        classNames={{
+          base: "flex-row lg:flex-col p-0 shadow-md cursor-pointer",
+          header: "p-0 basis-1/3 lg:basis-auto h-full",
+          body: "px-4 py-2 flex-grow",
+        }}
       >
-        <CardHeader className="p-0">
-          <Image src={imgUrl} alt={title} width={1232} height={928} />
+        <CardHeader id="CardHeader">
+          <Image
+            as={NextImage}
+            src={imgUrl}
+            alt={title}
+            width={1232}
+            height={928}
+            radius="none"
+            classNames={{ img: "object-cover" }}
+          />
         </CardHeader>
-        <CardBody className="px-4 py-2 flex-grow">
+        <CardBody>
           <h3 className="text-large leading-normal">{title}</h3>
           <p className="text-small leading-normal">撥款新台幣</p>
           <h4 className="text-secondary text-large leading-max font-bold tracking-[4px]">
@@ -50,6 +73,6 @@ export default function DonateProject({
           </div>
         </CardBody>
       </Card>
-    </button>
+    </Button>
   );
 }
