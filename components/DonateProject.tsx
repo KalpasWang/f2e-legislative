@@ -23,12 +23,7 @@ export default function DonateProject({
   onCardPress,
 }: Props) {
   return (
-    <Button
-      type="submit"
-      variant="light"
-      className="p-0 w-fit h-fit"
-      onPress={() => onCardPress()}
-    >
+    <Button variant="light" className="p-0 w-fit h-fit" onPress={onCardPress}>
       <Card
         radius="lg"
         classNames={{

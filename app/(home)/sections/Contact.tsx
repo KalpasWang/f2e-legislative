@@ -25,7 +25,7 @@ export default function Contact({}: Props) {
           <p className="pb-8 leading-normal text-base">
             親愛的鄉親，每一位市民的意見都是我們社區前進的原動力。無論大小事，我都誠摯希望聽到您的建議。分享您的想法，一同為我們的未來打造更美好！
           </p>
-          <div className="flex w-full flex-wrap md:flex-nowrap mb-unit-6 md:mb-0 gap-unit-6">
+          <div className="flex w-full flex-wrap md:flex-nowrap gap-unit-6">
             <ContactInput
               type="text"
               label="姓名"
@@ -39,19 +39,9 @@ export default function Contact({}: Props) {
               required
             />
           </div>
-          <div className="flex w-full flex-wrap md:flex-nowrap mb-unit-6 md:mb-0 gap-unit-6 pt-6">
-            <ContactInput
-              type="text"
-              label="姓名"
-              placeholder="輸入您的姓名"
-              required
-            />
-            <ContactInput
-              type="text"
-              label="E-mail"
-              placeholder="輸入您的 E-mail"
-              required
-            />
+          <div className="flex w-full flex-wrap md:flex-nowrap gap-unit-6 pt-6">
+            <ContactInput type="tel" label="手機" placeholder="輸入您的手機" />
+            <ContactInput type="tel" label="電話" placeholder="輸入您的電話" />
           </div>
           <div className="pt-6 pb-8">
             <Textarea
