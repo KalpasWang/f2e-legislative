@@ -15,6 +15,7 @@ import Logo from "@/components/Logo";
 import Paw from "@/components/icons/Paw";
 import Menu from "@/components/icons/Menu";
 import CloseMenu from "@/components/icons/CloseMenu";
+import { ThemeSwitcher } from "./sections/ThemeSwitcher";
 
 const navItems = [
   {
@@ -68,6 +69,9 @@ export default function NavBar() {
             </Link>
           </NavbarItem>
         ))}
+        <NavbarItem>
+          <ThemeSwitcher />
+        </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
         {navItems.map((item, i) => (
@@ -83,6 +87,9 @@ export default function NavBar() {
             </Link>
           </NavbarMenuItem>
         ))}
+        <NavbarMenuItem>
+          <ThemeSwitcher />
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );

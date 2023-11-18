@@ -7,11 +7,11 @@
 ![](./public/cover.jpg)
 [Demo](https://f2e-legislative.vercel.app/)
 
-
 # Features
 
 - 開場動畫
 - 捐款數字動畫
+- Theme switch
 - Link smooth scroll
 - RWD
 
@@ -22,6 +22,11 @@
 - NextUI
 - Tailwind CSS
 - Framer motion
+
+# 開發環境版本
+
+- Node.js v20.9.0
+- Next.js v14.0.1
 
 # 設計稿
 

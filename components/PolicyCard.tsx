@@ -23,7 +23,7 @@ export default function PolicyCard({
   onPress,
 }: Props) {
   return (
-    <Card className="px-unit-4 py-unit-6 border-primary border-4 shadow-card">
+    <Card className="px-unit-4 py-unit-6 border-primary border-4 shadow-card bg-background">
       <CardHeader className="flex justify-center items-center">
         {icon}
       </CardHeader>

@@ -92,8 +92,43 @@ module.exports = {
           },
         },
         dark: {
-          layout: {}, // dark theme layout tokens
-          colors: {}, // dark theme colors
+          colors: {
+            default: "#d4d4d4",
+            background: "#4b5563",
+            foreground: "#f9fafb",
+            primary: {
+              DEFAULT: "#F9A828",
+              foreground: "#0B0A09",
+            },
+            secondary: "#eab308",
+            focus: "#BFBFBF",
+          },
+          layout: {
+            disabledOpacity: "0.3",
+            spacingUnit: 4,
+            fontSize: {
+              tiny: "0.75rem", // text-tiny 12px
+              small: "0.875rem", // text-small 14px
+              medium: "1.5rem", // text-medium 24px
+              large: "2.5rem", // text-large
+            },
+            lineHeight: {
+              tiny: "1rem", // text-tiny
+              small: "1.25rem", // text-small
+              medium: "1.5rem", // text-medium
+              large: "1.75rem", // text-large
+            },
+            radius: {
+              small: "8px", // rounded-small
+              medium: "12px", // rounded-medium
+              large: "14px", // rounded-large
+            },
+            borderWidth: {
+              small: "1px", // border-small
+              medium: "2px", // border-medium (default)
+              large: "3px", // border-large
+            },
+          },
         },
       },
     }),

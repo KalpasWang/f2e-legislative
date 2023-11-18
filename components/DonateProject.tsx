@@ -27,7 +27,7 @@ export default function DonateProject({
       <Card
         radius="lg"
         classNames={{
-          base: "flex-col p-0 shadow-md cursor-pointer",
+          base: "flex-col p-0 shadow-md cursor-pointer bg-background",
           header: "p-0 basis-1/3 lg:basis-auto h-full",
           body: "px-4 py-2 flex-grow",
         }}
