@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Variants, motion } from "framer-motion";
+import { useLockedBody } from "usehooks-ts";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 
@@ -13,6 +14,8 @@ type Props = {
 
 export default function HomeLayout({ children }: Props) {
   const router = useRouter();
+  const [locked, setLocked] = useLockedBody(true, "root");
+
   const variants: Variants = {
     initial: { scaleY: 0 },
     animate: (custom: number) => ({
@@ -28,6 +31,9 @@ export default function HomeLayout({ children }: Props) {
           initial={{ y: -250 }}
           animate={{ y: 0 }}
           transition={{ delay: 1.2, duration: 0.5, ease: "easeInOut" }}
+          onAnimationComplete={() => {
+            setLocked(false);
+          }}
           className="origin-top"
         >
           <NavBar />

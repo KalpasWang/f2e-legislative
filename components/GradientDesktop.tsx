@@ -25,9 +25,9 @@ export default function GradientDesktop({ className }: Props) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(1280 600) rotate(-152.956) scale(1792.49 5048.21)"
         >
-          <stop offset="0.317452" stop-color="#FFA921" />
-          <stop offset="0.795871" stop-color="#FFE79A" />
-          <stop offset="1" stop-color="#FFDF70" />
+          <stop offset="0.317452" stopColor="#FFA921" />
+          <stop offset="0.795871" stopColor="#FFE79A" />
+          <stop offset="1" stopColor="#FFDF70" />
         </radialGradient>
       </defs>
     </svg>
