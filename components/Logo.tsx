@@ -22,7 +22,7 @@ export default function Logo({ fill = "#0B0A09", className = "" }: Props) {
   }, []);
 
   return (
-    <Link href="#hero" onClick={clickHandler}>
+    <Link href="#" onClick={clickHandler}>
       <svg
         width={width}
         height={height}
