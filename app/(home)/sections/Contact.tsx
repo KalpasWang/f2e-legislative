@@ -28,13 +28,13 @@ export default function Contact({}: Props) {
           <div className="flex w-full flex-wrap md:flex-nowrap gap-unit-6">
             <ContactInput
               type="text"
-              label="姓名"
+              label="姓名*"
               placeholder="輸入您的姓名"
               required
             />
             <ContactInput
               type="text"
-              label="E-mail"
+              label="E-mail*"
               placeholder="輸入您的 E-mail"
               required
             />

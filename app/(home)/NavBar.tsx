@@ -44,7 +44,7 @@ export default function NavBar() {
       isMenuOpen={isMenuOpen}
       classNames={{
         base: "p-0 shadow-md lg:py-unit-4",
-        menu: "h-max",
+        menu: "menu",
       }}
     >
       <NavbarMenuToggle

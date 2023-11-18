@@ -27,6 +27,7 @@ function ActivityCard({ item }: { item: ActivityItem }) {
           alt={item.name}
           width={2000}
           height={2000}
+          priority
           className="object-cover"
         />
       </CardHeader>

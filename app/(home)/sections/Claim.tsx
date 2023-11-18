@@ -1,6 +1,7 @@
-import SectionTitle from "@/components/SectionTitle";
-import Image from "next/image";
+import NextImage from "next/image";
 import React from "react";
+import { Image } from "@nextui-org/react";
+import SectionTitle from "@/components/SectionTitle";
 
 type Props = {};
 
@@ -23,10 +24,12 @@ export default function Claim({}: Props) {
               </div>
               <div className="text-left lg:text-right">
                 <Image
-                  src="/sign.png"
+                  as={NextImage}
+                  src="/sign.webp"
                   className="inline-block max-w-full"
                   width={800}
                   height={200}
+                  priority
                   alt="喵立翰簽名"
                 />
               </div>
@@ -34,7 +37,8 @@ export default function Claim({}: Props) {
           </div>
           <div className="flex justify-center items-center">
             <Image
-              src="/claim.jpg"
+              as={NextImage}
+              src="/claim.webp"
               priority
               className="object-cover"
               width={470}

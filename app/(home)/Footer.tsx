@@ -40,13 +40,25 @@ export default function Footer({}: Props) {
           </div>
           <div>
             <nav className="flex flex-nowrap justify-center gap-unit-6 pb-unit-10">
-              <Link href="#" color="secondary" className="text-xl font-bold">
+              <Link
+                href="#activity"
+                color="secondary"
+                className="text-xl font-bold"
+              >
                 最新活動
               </Link>
-              <Link href="#" color="secondary" className="text-xl font-bold">
+              <Link
+                href="#policy"
+                color="secondary"
+                className="text-xl font-bold"
+              >
                 政策議題
               </Link>
-              <Link href="#" color="secondary" className="text-xl font-bold">
+              <Link
+                href="#donate"
+                color="secondary"
+                className="text-xl font-bold"
+              >
                 小額捐款
               </Link>
             </nav>

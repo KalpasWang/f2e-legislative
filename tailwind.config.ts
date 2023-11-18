@@ -17,12 +17,12 @@ module.exports = {
         lg: "2rem",
       },
     },
-    colors: {
-      primaryDark: "#C78620",
-      shadow: "#BFBFBF",
-      support: "#FFFFFF",
-    },
     extend: {
+      colors: {
+        primaryDark: "#C78620",
+        shadow: "#BFBFBF",
+        support: "#FFFFFF",
+      },
       fontFamily: {
         noToSansTC: ["'Noto Sans TC'", "sans-serif"],
       },

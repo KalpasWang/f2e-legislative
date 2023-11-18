@@ -27,7 +27,7 @@ export default function ContactInput({
       classNames={{
         inputWrapper: "border-1",
         label: "absolute top-0 left-4 bg-background px-unit-2",
-        input: "text-focus text-2xl pl-2 h-full",
+        input: "placeholder:text-focus text-2xl pl-2 h-full",
       }}
     />
   );

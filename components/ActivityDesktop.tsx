@@ -41,7 +41,7 @@ export default function ActivityDesktop({ items }: Props) {
         >
           <Image
             src={item.image}
-            priority={i > 0 ? false : true}
+            priority
             width={2000}
             height={2000}
             className="object-cover mx-auto"

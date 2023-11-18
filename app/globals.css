@@ -38,3 +38,7 @@
   height: auto !important;
   padding: 0 !important;
 }
+
+.menu {
+  height: fit-content !important;
+}

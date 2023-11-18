@@ -90,7 +90,7 @@ export default function Donate({}: Props) {
               classNames={{
                 label: "text-large leading-normal",
                 description: "text-sm leading-normal",
-                input: "shadow-inner rounded-lg pl-3 text-focus",
+                input: "shadow-inner rounded-lg pl-3 text-focus bg-background",
               }}
             />
             <div className="grid grid-cols-2 pt-unit-2 gap-unit-4">
