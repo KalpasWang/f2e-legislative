@@ -42,7 +42,7 @@ export default function HomeLayout({ children }: Props) {
         </motion.div>
         <motion.div
           initial={{ y: 0 }}
-          animate={{ y: "100%" }}
+          animate={{ y: "100%", transitionEnd: { display: "none"} }}
           transition={{ delay: 1.2, duration: 0.5, ease: "easeInOut" }}
           className="fixed inset-0 z-50 bg-primary flex justify-center items-center"
         >

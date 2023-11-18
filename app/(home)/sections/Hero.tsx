@@ -12,25 +12,23 @@ export default function Hero({}: Props) {
   return (
     <section
       id="hero"
-      className="relative h-[calc(100vh-64px)] min-h-[500px] lg:min-h-[700px] overflow-hidden"
+      className="relative overflow-hidden"
     >
       <div className="absolute bottom-0 left-0 right-0">
         <GradientDesktop className="w-full hidden lg:block" />
         <GradientMobile className="w-full lg:hidden" />
       </div>
-      <div className="container relative h-full flex flex-row flex-nowrap justify-end items-end lg:items-center">
-        <div className="absolute left-0 top-0">
+      <div className="container relative flex justify-start items-end">
           <Image
             as={NextImage}
             src="/hero.webp"
-            className="object-cover object-top w-80 lg:w-auto h-full"
+            className="max-w-full"
             width={582}
             height={939}
             priority
             alt="喵立翰"
           />
-        </div>
-        <div className="relative z-20 h-full font-noToSansTC flex flex-col justify-end lg:justify-center">
+        <div className="absolute right-0 bottom-0 lg:bottom-1/4 z-20 font-noToSansTC">
           <div className="bg-primary bg-opacity-75 lg:bg-transparent rounded-sm">
             <h2 className="text-tiny text-right lg:text-left lg:text-2xl font-bold leading-normal tracking-[1px]">
               立法委員
