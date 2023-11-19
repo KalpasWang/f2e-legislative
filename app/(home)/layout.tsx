@@ -28,9 +28,9 @@ export default function HomeLayout({ children }: Props) {
     <NextUIProvider navigate={router.push}>
       <NextThemesProvider attribute="class" defaultTheme="light">
         <motion.div
-          initial={{ y: -250 }}
+          initial={{ y: -500 }}
           animate={{ y: 0 }}
-          transition={{ delay: 1.2, duration: 0.5, ease: "easeInOut" }}
+          transition={{ delay: 1.5, duration: 0.5, ease: "easeInOut" }}
           onAnimationComplete={() => {
             setLocked(false);
           }}
@@ -43,7 +43,7 @@ export default function HomeLayout({ children }: Props) {
         <motion.div
           initial={{ y: 0 }}
           animate={{ y: "100%", transitionEnd: { display: "none"} }}
-          transition={{ delay: 1.2, duration: 0.5, ease: "easeInOut" }}
+          transition={{ delay: 1.5, duration: 0.5, ease: "easeInOut" }}
           className="fixed inset-0 z-50 bg-primary flex justify-center items-center"
         >
           <motion.div
@@ -51,7 +51,7 @@ export default function HomeLayout({ children }: Props) {
             initial="initial"
             animate="animate"
             custom={0}
-            className="bg-focus px-unit-8 py-unit-5 origin-bottom"
+            className="bg-focus bg-opacity-50 px-unit-8 py-unit-5 origin-bottom hover:scale-110"
           >
             <motion.svg
               variants={variants}
